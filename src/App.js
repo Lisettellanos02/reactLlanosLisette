@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent";
 import Saludo from './components/Saludo/Saludo';
+import Item from './components/Item/Item';
 
 
 function App(){
@@ -11,8 +12,8 @@ function App(){
 
   const styleSaludo = {
     height: calcularAlto(),
-    color: "blue",
-    backgroundColor: "white",
+    color: "black",
+    backgroundColor: "purple",
   };
 
   return( 
@@ -26,17 +27,25 @@ function App(){
         <Saludo/>
        </div>
 
-       <ButtonComponent />
+       <ButtonComponent colorFondo="red" label="Boton 1"/>
+       <ButtonComponent label="Otro boton"/>
 
-        <a
-          className="App-link"
-          href="https://reactjs.org" 
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Item
+       img="https://http2.mlstatic.com/D_NQ_NP_616028-MLA31040337579_062019-W.jpg"
+       title="Ambo rojo" 
+       price={12500}
+       />
+       <Item
+       img="http://mla-s1-p.mlstatic.com/843559-MLA41421157195_042020-O.jpg"
+       title="Ambo lila" 
+       price={9000}
+       />
+       <Item
+       img="https://http2.mlstatic.com/D_NQ_NP_862349-MLA31115409909_062019-W.jpg"
+       title="Ambo azul" 
+       price={8500}
+       />
     </div>
     </div>
   );

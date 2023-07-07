@@ -1,8 +1,15 @@
-function ButtonComponent(){
+import "./button.css";
+function ButtonComponent(props){
+  console.log("Boton");
+  console.log(props);
+
+  const styleButton ={
+ backgroundColor: props.colorFondo,
+  } ;
+
     return(
       <div>
-        <button>Click me</button>
-        <small>Soy un boton</small>
+        <button style= {styleButton} className="btn">{props.label}</button>
       </div>
     );
   }

@@ -1,9 +1,9 @@
 function Saludo(){
-    const palabra = "React";
+    const palabra = "Medicina";
   
     return( 
     <div>
-      <h2>Bienvenido al curso de {palabra}</h2>
+      <h2>Encontra los unifornes mas lindos para {palabra}</h2>
     </div>
     );
   }
