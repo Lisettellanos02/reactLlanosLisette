@@ -6,7 +6,7 @@ function getData() {
             id: 1,
             limit: 5,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"http://mla-s1-p.mlstatic.com/843559-MLA41421157195_042020-O.jpg",
+            img:"/assets/amboLila.jpg",
             price: 9000,
         },
         {
@@ -14,7 +14,7 @@ function getData() {
             id: 2,
             limit: 8,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"https://http2.mlstatic.com/D_NQ_NP_862349-MLA31115409909_062019-W.jpg",
+            img:"/assets/amboAzul.jpg",
             price: 11000,
         },
         {
@@ -22,7 +22,7 @@ function getData() {
             id: 3,
             limit: 3,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"https://i.pinimg.com/originals/42/c2/ee/42c2eec124c57ed3fa5006a2fa0eb337.jpg",
+            img:"/assets/amboRosa.jpg",
             price: 8500,
         },
         {
@@ -30,7 +30,7 @@ function getData() {
             id: 4,
             limit: 6,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"https://i.pinimg.com/474x/2d/f0/e0/2df0e0d147e2f610c6000a1be61ceaad--medical-scrubs-nursing-scrubs.jpg",
+            img:"/assets/amboNegro.jpg",
             price: 9500,
         },
         {
@@ -38,9 +38,17 @@ function getData() {
             id: 5,
             limit: 7,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"https://i.pinimg.com/474x/2d/f0/e0/2df0e0d147e2f610c6000a1be61ceaad--medical-scrubs-nursing-scrubs.jpg",
+            img:"/assets/amboAmarillo.jpg",
             price: 10500,
-        }
+        },
+        {
+            title:"Ambo Rojo",
+            id: 6,
+            limit: 8,
+            description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
+            img:"/assets/amboRojo.jpg",
+            price: 12000,
+        },
 
         ];
 
@@ -100,7 +108,7 @@ export function getProductData() {
             limit: 8,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
             img:"/assets/amboRojo.jpg",
-            price: 10500,
+            price: 12000,
         },
 
         ];
