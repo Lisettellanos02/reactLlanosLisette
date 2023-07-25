@@ -59,7 +59,7 @@ export function getProductData() {
             id: 1,
             limit: 5,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img: "/assets/img/ambo lila",
+            img: "/assets/amboLila.jpg",
             price: 9000,
         },
         {
@@ -67,7 +67,7 @@ export function getProductData() {
             id: 2,
             limit: 8,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"",
+            img:"/assets/amboAzul.jpg",
             price: 11000,
         },
         {
@@ -75,7 +75,7 @@ export function getProductData() {
             id: 3,
             limit: 3,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"",
+            img:"/assets/amboRosa.jpg",
             price: 8500,
         },
         {
@@ -83,7 +83,7 @@ export function getProductData() {
             id: 4,
             limit: 6,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"",
+            img:"/assets/amboNegro.jpg",
             price: 9500,
         },
         {
@@ -91,7 +91,7 @@ export function getProductData() {
             id: 5,
             limit: 7,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"",
+            img:"/assets/amboAmarillo.jpg",
             price: 10500,
         },
         {
@@ -99,7 +99,7 @@ export function getProductData() {
             id: 6,
             limit: 8,
             description: "Hermoso ambo medico de excelente calidad, ultimos diseños disponibles a un precio de promocion",
-            img:"",
+            img:"/assets/amboRojo.jpg",
             price: 10500,
         },
 
