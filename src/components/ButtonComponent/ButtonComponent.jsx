@@ -1,4 +1,4 @@
-import "./button.css";
+/*import "./button.css";
 function ButtonComponent(props){
   console.log("Boton");
   console.log(props);
@@ -14,7 +14,7 @@ function ButtonComponent(props){
     );
   }
   
-export default ButtonComponent;
+export default ButtonComponent;*/
 
 
 

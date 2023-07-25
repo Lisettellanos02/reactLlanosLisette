@@ -1,4 +1,4 @@
-function Saludo(){
+/*function Saludo(){
     const palabra = "Medicina";
   
     return( 
@@ -8,4 +8,4 @@ function Saludo(){
     );
   }
 
-  export default Saludo;
+  export default Saludo;*/

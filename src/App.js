@@ -130,7 +130,7 @@ function handleClickResta(){
 }*/
 
 import "./App.css";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 
