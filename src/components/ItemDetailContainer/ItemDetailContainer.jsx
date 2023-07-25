@@ -17,14 +17,14 @@ function ItemDetailContainer() {
         <div>
         <img src={product.img} alt="imagen"></img>
         </div>
-       <div>
-       <h2>{product.title}</h2>
-       </div>
-       <div>
+        <div>
+        <h2>{product.title}</h2>
+        </div>
+        <div>
         <h4>{product.price}</h4>
         <small>{product.description}</small>
-       </div> 
+        </div> 
         </>
-    );   
+        );   
 } 
 export default ItemDetailContainer;

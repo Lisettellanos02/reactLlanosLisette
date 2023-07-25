@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
-import "./item.css";
+//import "./item.css";
 
 function Item (props){
     const { title, img, price, description} = props;

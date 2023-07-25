@@ -1,4 +1,4 @@
-/*import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import ButtonComponent from "./components/ButtonComponent/ButtonComponent";
 import Saludo from './components/Saludo/Saludo';
@@ -6,7 +6,7 @@ import Item from './components/Item/Item';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
-function App(){
+/*function App(){
   function calcularAlto(){
     return "200px";
   }
