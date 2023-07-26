@@ -6,7 +6,7 @@ function ItemDetailContainer() {
 
     async function requestProduct() {
         const respuesta = await getProductData();
-        setProduct(respuesta[0]);
+        setProduct(respuesta);
     }
     useEffect(() => {
        requestProduct()
