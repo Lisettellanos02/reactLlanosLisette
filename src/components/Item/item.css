@@ -19,7 +19,7 @@ a{
     padding: 20px 25px;
     width: 320px;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #eadfed;
     overflow: hidden;    
     transition: all ease-in 0.25s;
     cursor: pointer;
@@ -73,8 +73,8 @@ a{
     margin: 5px 15px;
     padding: 8px 8px;
     cursor: pointer;
-    background-color: rgb(219, 219, 219);
-    color: #8c8c8e;
+    background-color: rgb(255, 255, 255);
+    color: #737375;
   }
   
   .item-card_favicon.favorite{

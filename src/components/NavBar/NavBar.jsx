@@ -20,7 +20,7 @@ export default function NavBar(){
                         <Link className="nav-link" to="/product">Pantalones</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/prueba">Accesorios</Link>
+                        <Link className="nav-link" to="/category/accesorios">Accesorios</Link>
                     </li>
                     {/* CartWidget*/}
                     <div>carrito</div>
