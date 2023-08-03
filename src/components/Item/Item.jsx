@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
-//import "./item.css";
+import "./item.css";
 
 function Item (props){
     const { title, img, price, description} = props;
@@ -16,7 +16,7 @@ function Item (props){
        <h4>${price}</h4>
        <small>{description}</small>
     </div>
-      <Link to="/">
+      <Link to= {"/product/id"}>
          <ButtonComponent colorFondo="grey">Ver Productos</ButtonComponent>
       </Link>     
     </div>

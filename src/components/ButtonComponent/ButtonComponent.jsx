@@ -1,20 +1,21 @@
-/*import "./button.css";
+import "./button.css";
 function ButtonComponent(props){
-  console.log("Boton");
-  console.log(props);
+  const {children, colorFondo} = props;
 
-  const styleButton ={
- backgroundColor: props.colorFondo,
-  } ;
+  const styleButton = {
+ backgroundColor: colorFondo,
+  };
 
     return(
-      <div>
-        <button style= {styleButton} className="btn">{props.label}</button>
-      </div>
+      <>
+        <button onClick={props.onClick} style={styleButton} className="btn">
+          {children}
+          </button>
+      </>
     );
   }
   
-export default ButtonComponent;*/
+export default ButtonComponent;
 
 
 
