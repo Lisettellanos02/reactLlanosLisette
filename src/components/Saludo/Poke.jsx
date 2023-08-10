@@ -5,7 +5,6 @@ function Pokedex() {
   const [searchId, setSearchId] = useState(null);
 
   console.log(searchId);
-
   useEffect(() => {
     async function readAPI() {
       try {

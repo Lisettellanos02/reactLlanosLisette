@@ -2,7 +2,7 @@ const productos = [
     {
       title: "Ambo Arciel",
       id: 1,
-      limit: 5,
+      stock: 5,
       description: "Ambo Arciel de dama entallado, disponible en color lila",
       img: "/assets/amboLila.jpg",
       price: 8000,
@@ -38,8 +38,8 @@ const productos = [
     {
       title: "Ambo Arciel",
       id: 5,
-      limit: 5,
-      description: "Camiseta de fútbol de alta calidad",
+      stock: 5,
+      description: "Ambo Arciel de dama entallado, disponible en color azul",
       img: "/assets/amboAzul.jpg",
       price: 13500,
       category: "lisos",
@@ -74,41 +74,40 @@ const productos = [
     {
       title: "Ambo Arciel",
       id: 9,
-      stock: 2,
+      stock: 5,
       description: "Ambo Arciel de dama entallado, disponible en color fucsia",
       img: "/assets/amboRosa.JPG",
       price: 9000,
       category: "lisos",
     },
     {
-      title: "Cofia y Barbijo",
+      title: "Cofia",
       id: 10,
       stock: 4,
-      description: "Ambo Arciel de dama entallado, disponible en color fucsia",
+      description: "Hermosa cofia para quirofano marca Arciel",
       img: "/assets/cofia1.JPG",
-      price: 9000,
+      price: 2300,
       category: "accesorios",
     },
     {
-      title: "Cofia y Barbijo",
+      title: "Cofia",
       id: 11,
       stock: 3,
-      description: "Ambo Arciel de dama entallado, disponible en color fucsia",
+      description: "Hermosa cofia para quirofano marca Arciel",
       img: "/assets/cofia2.JPG",
-      price: 9000,
+      price: 2800,
       category: "accesorios",
     },
     {
       title: "Cofia y Barbijo",
       id: 12,
       stock: 5,
-      description: "Ambo Arciel de dama entallado, disponible en color fucsia",
+      description: "Hermosa cofia y barbijo para quirofano marca Arciel",
       img: "/assets/cofia3.JPG",
-      price: 9000,
+      price: 3000,
       category: "accesorios",
     },
   ];
-  
   function getData() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {

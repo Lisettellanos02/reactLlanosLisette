@@ -1,34 +1,60 @@
 import React, { useState } from "react";
 
-function ItemCountComponent({ props }) {
-    const [clickCount, setClickCount] = useState(0);
+function ItemCount(props) {
+  const [clickCount, setClickCount] = useState(1);
 
-function handleClickAdd() {
-    if (clickCount == props) {    
+  function handleClickAdd() {
+    if (clickCount === props.stock) {
     } else {
-        setClickCount(clickCount + 1);
+      setClickCount(clickCount + 1);
     }
-}
+  }
 
-function handleClickSub() {
-    if (clickCount > 1){
-        setClickCount(clickCount - 1);
+  function handleClickSub() {
+    if (clickCount > 1) {
+      setClickCount(clickCount - 1);
     }
-}
+  }
 
-return(
-    <div className="item-count-container">
-        <button className="item-count-button" onClick={handleClickSub}>    
-        -
+  return (
+    <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        className="item-count-container"
+      >
+        <button
+          disabled={props.stock === 0}
+          className="item-count-button"
+          onClick={handleClickSub}
+        >
+          -
         </button>
         <h2 className="count-text">{clickCount}</h2>
-        <button className="item-count-button" onClick={handleClickAdd}>    
-        +
+        <button
+          disabled={props.stock === 0}
+          className="item-count-button"
+          onClick={handleClickAdd}
+        >
+          +
         </button>
-        <button className="item-count-button add-to-cart-button">
-            <h4>Añadir al carrito</h4>
-        </button>
+      </div>
+
+      <button
+        disabled={props.stock === 0}
+     
+        onClick={() => props.onConfirm(clickCount)}
+       
+        className="item-count-button add-to-cart-button"
+      >
+        <h4>Añadir al carrito</h4>
+      </button>
     </div>
   );
 }
-export default ItemCountComponent;
+
+export default ItemCount;
