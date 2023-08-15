@@ -1,3 +1,4 @@
+import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   collection,
@@ -26,6 +27,7 @@ const appFirebase = initializeApp(firebaseConfig);
 
 const db = getFirestore(appFirebase);
 
+
 async function getData() {
   const productsRef = collection(db, "products");
   const documentsSnapshot = await getDocs(productsRef);
@@ -34,9 +36,11 @@ async function getData() {
     (item) => {
       return { ...item.data(), id: item.id };
     }
+
   );
   return docsData;
 }
+
 async function getProductData(id) {
   const docRef = doc(db, "products", id);
   const docSnapshot = await getDoc(docRef);
@@ -47,6 +51,7 @@ async function getProductData(id) {
     throw new Error("No encontramos ese producto.");
   }
 }
+
 
 async function getCategoryData() {
   const productsRef = collection(db, "products");
@@ -72,10 +77,8 @@ async function getOrder(id){
   const docSnapshot = await getDoc(docRef);
 
   return { ...docSnapshot.data(), id: docSnapshot.id };
- 
 
 }
-
 
 async function _exportProducts(){
   const productos = [
@@ -190,11 +193,13 @@ async function _exportProducts(){
     
   ];
 
+
   for(let item of productos){   
     const collectionRef = collection(db, "products")
     const docCreated = await addDoc(collectionRef, item);
     console.log("Doc created with id:", docCreated.id)
   }
+
 }
 
 
