@@ -1,4 +1,3 @@
-//import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   collection,
@@ -27,8 +26,6 @@ const appFirebase = initializeApp(firebaseConfig);
 
 const db = getFirestore(appFirebase);
 
-// 2 Implementar async function getData()
-
 async function getData() {
   const productsRef = collection(db, "products");
   const documentsSnapshot = await getDocs(productsRef);
@@ -37,14 +34,9 @@ async function getData() {
     (item) => {
       return { ...item.data(), id: item.id };
     }
-    /* {let productFullData = item.data();
-    productFullData.id = item.id;
-    return productFullData; }*/
   );
   return docsData;
 }
-
-//  3.Implementar getProductData
 async function getProductData(id) {
   const docRef = doc(db, "products", id);
   const docSnapshot = await getDoc(docRef);
@@ -56,10 +48,9 @@ async function getProductData(id) {
   }
 }
 
-// * 4 Implementar getCategoryData
 async function getCategoryData() {
   const productsRef = collection(db, "products");
-  // cambiamos esto
+
   const q = query(productsRef, where("price", ">=", 200));
   const documentsSnapshot = await getDocs(q);
 
@@ -89,113 +80,113 @@ async function getOrder(id){
 async function _exportProducts(){
   const productos = [
     {
-        title: "Ambo Arciel",
-        id: 1,
-        limit: 5,
-        description: "Ambo Arciel de dama entallado, disponible en color lila",
-        img: "/assets/amboLila.jpg",
-        price: 8000,
-        category: "lisos",
-      },
-      {
-        title: "Ambo Arciel",
-        id: 2,
-        stock: 8,
-        description: "Ambo Arciel de dama entallado, disponible en estampado mariposa",
-        img: "/assets/amboMariposa.png",
-        price: 11000,
-        category: "estampados",
-      },
-      {
-        title: "Ambo Arciel",
-        id: 3,
-        stock: 3,
-        description: "Ambo Arciel de dama entallado, disponible en color negro",
-        img: "/assets/amboNegro.jpg",
-        price: 12000,
-        category: "lisos",
-      },
-      {
-        title: "Ambo Arciel",
-        id: 4,
-        stock: 2,
-        description: "Ambo Arciel de dama entallado, disponible en estampado con detalles naranjas",
-        img: "/assets/amboNaranja.WEBP",
-        price: 15600,
-        category: "estampados",
-      },
-      {
-        title: "Ambo Arciel",
-        id: 5,
-        limit: 5,
-        description: "Camiseta de fútbol de alta calidad",
-        img: "/assets/amboAzul.jpg",
-        price: 13500,
-        category: "lisos",
-      },
-      {
-        title: "Ambo Arciel",
-        id: 6,
-        stock: 8,
-        description: "Ambo Arciel de dama entallado, disponible en estampado rosa pastel y blanco",
-        img: "/assets/amboEstampado.jpg",
-        price: 11700,
-        category: "estampados",
-      },
-      {
-        title: "Ambo Arciel",
-        id: 7,
-        stock: 3,
-        description: "Ambo Arciel de dama entallado, disponible en color rojo",
-        img: "/assets/amboRojo.jpg",
-        price: 12800,
-        category: "lisos",
-      },
-      {
-        title: "Ambo Arciel",
-        id: 8,
-        stock: 2,
-        description: "Ambo Arciel de dama entallado, disponible en multicolor rosa, blanco y celeste",
-        img: "/assets/amboCo.WEBP",
-        price: 10300,
-        category: "estampados",
-      },
-      {
-        title: "Ambo Arciel",
-        id: 9,
-        stock: 2,
-        description: "Ambo Arciel de dama entallado, disponible en color fucsia",
-        img: "/assets/amboRosa.JPG",
-        price: 9000,
-        category: "lisos",
-      },
-      {
-        title: "Cofia",
-        id: 10,
-        stock: 4,
-        description: "Ambo Arciel de dama entallado, disponible en color fucsia",
-        img: "/assets/cofia1.JPG",
-        price: 2300,
-        category: "accesorios",
-      },
-      {
-        title: "Cofia",
-        id: 11,
-        stock: 3,
-        description: "Ambo Arciel de dama entallado, disponible en color fucsia",
-        img: "/assets/cofia2.JPG",
-        price: 2800,
-        category: "accesorios",
-      },
-      {
-        title: "Cofia y Barbijo",
-        id: 12,
-        stock: 5,
-        description: "Ambo Arciel de dama entallado, disponible en color fucsia",
-        img: "/assets/cofia3.JPG",
-        price: 3000,
-        category: "accesorios",
-      },
+      title: "Ambo Arciel",
+      id: 1,
+      stock: 5,
+      description: "Ambo Arciel de dama entallado, disponible en color lila",
+      img: "/assets/amboLila.jpg",
+      price: 8000,
+      category: "lisos",
+    },
+    {
+      title: "Ambo Arciel",
+      id: 2,
+      stock: 8,
+      description: "Ambo Arciel de dama entallado, disponible en estampado mariposa",
+      img: "/assets/amboMariposa.png",
+      price: 11000,
+      category: "estampados",
+    },
+    {
+      title: "Ambo Arciel",
+      id: 3,
+      stock: 3,
+      description: "Ambo Arciel de dama entallado, disponible en color negro",
+      img: "/assets/amboNegro.jpg",
+      price: 12000,
+      category: "lisos",
+    },
+    {
+      title: "Ambo Arciel",
+      id: 4,
+      stock: 2,
+      description: "Ambo Arciel de dama entallado, disponible en estampado con detalles naranjas",
+      img: "/assets/amboNaranja.WEBP",
+      price: 15600,
+      category: "estampados",
+    },
+    {
+      title: "Ambo Arciel",
+      id: 5,
+      stock: 5,
+      description: "Ambo Arciel de dama entallado, disponible en color azul",
+      img: "/assets/amboAzul.jpg",
+      price: 13500,
+      category: "lisos",
+    },
+    {
+      title: "Ambo Arciel",
+      id: 6,
+      stock: 8,
+      description: "Ambo Arciel de dama entallado, disponible en estampado rosa pastel y blanco",
+      img: "/assets/amboEstampado.jpg",
+      price: 11700,
+      category: "estampados",
+    },
+    {
+      title: "Ambo Arciel",
+      id: 7,
+      stock: 3,
+      description: "Ambo Arciel de dama entallado, disponible en color rojo",
+      img: "/assets/amboRojo.jpg",
+      price: 12800,
+      category: "lisos",
+    },
+    {
+      title: "Ambo Arciel",
+      id: 8,
+      stock: 2,
+      description: "Ambo Arciel de dama entallado, disponible en multicolor rosa, blanco y celeste",
+      img: "/assets/amboCo.WEBP",
+      price: 10300,
+      category: "estampados",
+    },
+    {
+      title: "Ambo Arciel",
+      id: 9,
+      stock: 5,
+      description: "Ambo Arciel de dama entallado, disponible en color fucsia",
+      img: "/assets/amboRosa.JPG",
+      price: 9000,
+      category: "lisos",
+    },
+    {
+      title: "Cofia",
+      id: 10,
+      stock: 4,
+      description: "Hermosa cofia para quirofano marca Arciel",
+      img: "/assets/cofia1.JPG",
+      price: 2300,
+      category: "accesorios",
+    },
+    {
+      title: "Cofia",
+      id: 11,
+      stock: 3,
+      description: "Hermosa cofia para quirofano marca Arciel",
+      img: "/assets/cofia2.JPG",
+      price: 2800,
+      category: "accesorios",
+    },
+    {
+      title: "Cofia y Barbijo",
+      id: 12,
+      stock: 5,
+      description: "Hermosa cofia y barbijo para quirofano marca Arciel",
+      img: "/assets/cofia3.JPG",
+      price: 3000,
+      category: "accesorios",
+    },
     
   ];
 
@@ -294,7 +285,7 @@ async function _exportProductsWithBatch(){
         title: "Cofia",
         id: 10,
         stock: 4,
-        description: "Ambo Arciel de dama entallado, disponible en color fucsia",
+        description: "Hermosa cofia para quirofano marca Arciel",
         img: "/assets/cofia1.JPG",
         price: 2300,
         category: "accesorios",
@@ -303,7 +294,7 @@ async function _exportProductsWithBatch(){
         title: "Cofia",
         id: 11,
         stock: 3,
-        description: "Ambo Arciel de dama entallado, disponible en color fucsia",
+        description: "Hermosa cofia para quirofano marca Arciel",
         img: "/assets/cofia2.JPG",
         price: 2800,
         category: "accesorios",
@@ -312,12 +303,11 @@ async function _exportProductsWithBatch(){
         title: "Cofia y Barbijo",
         id: 12,
         stock: 5,
-        description: "Ambo Arciel de dama entallado, disponible en color fucsia",
+        description: "Hermosa cofia y barbijo para quirofano marca Arciel",
         img: "/assets/cofia3.JPG",
         price: 3000,
         category: "accesorios",
-      },
-     
+      },  
   ];
 
   const batch = writeBatch(db); 
