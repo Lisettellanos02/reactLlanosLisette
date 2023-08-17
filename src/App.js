@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from "./context/cartContext";
 import CartContainer from "./components/CartContainer/CartContainer";
 import OrderConfirm from "./components/OrderConfirm/OrderConfirm";
+import { DocumentSnapshot, collection } from "firebase/firestore";
 
 function App() {
   return (

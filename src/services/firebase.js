@@ -14,12 +14,12 @@ import {
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCHmBUcC4YP1uoSw95LIHo9CAx7kRPwn9g",
-  authDomain: "react43305.firebaseapp.com",
-  projectId: "react43305",
-  storageBucket: "react43305.appspot.com",
-  messagingSenderId: "384859310967",
-  appId: "1:384859310967:web:3bad2593d267b8ecc02f72"
+  apiKey: "AIzaSyDe2EIoD9_DLkA0HRd4vPIMUaa6Z26KaaA",
+  authDomain: "react-app-33828.firebaseapp.com",
+  projectId: "react-app-33828",
+  storageBucket: "react-app-33828.appspot.com",
+  messagingSenderId: "14899109878",
+  appId: "1:14899109878:web:6509644b4e8f0f4c28f1d7"
 };
 
 

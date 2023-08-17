@@ -10,7 +10,7 @@ function CartContainer() {
   async function handleCheckout() {
     const orderData = {
       items: cart,
-      buyer: { name: "Santiago", email: "santi@mail.com", phone: "123123123" },
+      buyer: { name: "Lisette", email: "llanoslisette215@mail.com", phone: "17854222" },
       date: new Date(),
       total: 1500, 
     };
